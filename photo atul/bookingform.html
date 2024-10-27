@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Bookingform</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+       #i{
+        background-image: linear-gradient(to left, violet, indigo,red, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    fieldset{
+        margin-left: 250px;
+    }
+    label{
+        font-size: x-large;
+        padding-left: 20px;
+    }
+    input{
+        padding: 5px;
+    }
+    ::placeholder{
+        font-size: 17px;
+    }
+    textarea{
+        font-size: large;
+    }
+    input{
+        width: 500px;
+        float: right;
+        margin-right: 600px;
+    }
+
+    /*round css*/
+    .contaner{
+        height: 450px;
+        width: 100%;
+        border: 1px solid black;
+        background-color: black;
+    }
+    .z{
+    height: 300px;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(241, 232, 232, 0.9), 0 6px 20px 0 rgba(226, 222, 222, 0.19);
+    }
+   #a{
+    color: white;
+    margin: 100px;
+    text-align: center;
+    margin-bottom: -100px;
+    margin: 50px;
+    text-decoration: wavy;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-box-reflect:below 0px linear-gradient(transparent,transparent,#0004) ;
+    
+   }
+
+
+  </style>
+    </head>
+    <body>
+        
+   <form>
+         
+           <center>
+               <h1 style="font-size: 40px;color:red;font-stretch: 500px;" id="i">WELCOME TO ATUL STUDIO</h1>
+               <h2 style="color: red;font-size: 30px;"><i>Booking Form</i></h2>
+           </center>
+           <br>
+           
+           <label>Name:</label>
+           <input id="n" type="text" name="name" placeholder="Enter name here" maxlength="100" autocomplete="off" required>
+           <br><br>
+           <label>Type of Photography:</label>
+           <select id="tp" style="font-size: 17px;width: 500px;padding: 5px;" name="Photography" required>
+            <option>--Select Photography--</option>
+            <option>Wedding</option>
+            <option>Pre-Wedding</option>
+            <option>Maternity shoot</option>
+            <option>Birthday shoot</option>
+            <option>Other</option>
+        </select>
+           <br><br>
+           <label>Select Package:</label>
+           <select id="sp" style="font-size: 17px;width: 500px;padding: 5px;margin-left: 63px;" name="Package"  required>
+            <option>--Select Package--</option>
+               <option>Bronzee Package</option>
+               <option>Silver Package</option>
+               <option>Gold Package</option>
+           </select>
+          <br><br>
+          <label>Wedding Date:</label>
+          <input id="dt" type="date" name="Date" name="date" required>
+          <br><br>
+          <label>Wedding Time:</label>
+          <input id="wt" type="time" name="Time" name="time" required>
+          <br><br>
+          <label>Your Contect No.:</label>
+          <input id="cc" type="number" name="no." placeholder="123-456-789" autocomplete="off">
+          <br><br>
+          <label>Wedding hall address:</label>
+          <br>
+          <textarea id="ad" style="padding: 40px;margin-left: 250px;margin-bottom: 50px;width: 500px;height: 250px;" name="address" placeholder="Enter Address here..." maxlength="200" autocomplete="off" required>
+       
+         </textarea>
+            <center>
+                <button type="submit" class="btn btn-success btn-md" style="width: 120px;height: 40px;" onclick="test1();">Book</button>
+                <br><br>
+            </center>
+            
+   </form>
+   <br>
+   <div class="contaner">
+    <h2 id="a">3D Rotation Image Gallery</h2> 
+    </head>
+    <center>  
+    <div class="box">
+        <h2 style="color: white;">Atul Studio</h2> 
+      <span style="--i:1;"><img class="z" src="img1.jpg"></span>
+      <span style="--i:2;"><img class="z" src="img2.jpg"></span>
+      <span style="--i:3;"><img class="z" src="IMG_20210828_001125.jpg"></span>
+      <span style="--i:4;"><img class="z" src="img10.jpg"></span>
+      <span style="--i:5;"><img class="z" src="img11.jpg"></span>
+      <span style="--i:6;"><img class="z" src="IMG_20210827_235616.jpg"></span>
+      <span style="--i:7;"><img class="z" src="img4.jpg"></span>
+      <span style="--i:8;"><img class="z" src="img8.jpg"></span>
+    </div>
+   </center>
+   
+   </div>
+   
+   <script>
+      
+       function test1()
+       {
+          
+           var name=document.getElementById("n").value;
+           var photo=document.getElementById("tp").value;
+           var select=document.getElementById("sp").value;
+           var dt=document.getElementById("dt").value;
+           var wt=document.getElementById("wt").value;
+           var cc=document.getElementById("cc").value;
+           var add=document.getElementById("ad").value;
+           
+           
+          
+           //if(empty(" "))
+           //{
+               //alert("Plese fill all the details...");
+           //}
+           alert("Booking is done successfully....Thank You for Booking a Slot");
+           
+       }
+   </script>
+
+    </body>
+</html>
